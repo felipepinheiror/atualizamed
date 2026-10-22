@@ -1,0 +1,64 @@
+/* Entrada, Feedback, avaliação das aulas e Painel do desenvolvedor — usa os tokens de estilo.css */
+
+/* Entrada com a chave */
+.entrar-corpo { padding-top: 12vh; }
+.selo-teste {
+  display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 99px; margin-bottom: 14px;
+  font-size: 12px; font-weight: 700; color: var(--brand); background: var(--brand-soft);
+}
+.form-entrar { margin-top: 24px; display: grid; gap: 10px; }
+.campo-chave { font-size: 22px; font-weight: 700; letter-spacing: .06em; text-align: center; }
+.msg-entrar { min-height: 1.4em; margin: 0; text-align: center; color: var(--ink-2); font-size: 14px; }
+
+/* Avaliação de cada aula */
+.avaliar { display: grid; gap: 10px; padding: 16px; border-radius: var(--r-md); background: var(--surface); box-shadow: var(--sombra); margin-top: 16px; }
+.avaliar .chip .ico { display: none; }
+.avaliar .chip.sel .ico { display: block; color: var(--brand); }
+.avaliar.feito { display: flex; align-items: center; gap: 8px; color: var(--brand); font-weight: 600; }
+.area-texto.curta { min-height: 64px; }
+
+/* Feedback */
+.bloco-feedback { margin-top: 18px; display: grid; gap: 10px; }
+.notas { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.nota {
+  min-height: 52px; border-radius: 14px; border: 1.5px solid var(--line); background: var(--surface);
+  font-size: 18px; font-weight: 700; cursor: pointer; color: var(--ink);
+}
+.nota.sel { background: var(--brand); border-color: var(--brand); color: var(--on-brand); }
+.notas-legenda { display: flex; justify-content: space-between; font-size: 12px; color: var(--ink-3); }
+.obrigado { display: grid; justify-items: center; text-align: center; gap: 10px; padding-top: 18vh; }
+.ico-caixa.grande { width: 64px; height: 64px; border-radius: 20px; }
+
+/* Painel */
+.cartoes-numeros { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+@media (min-width: 560px) { .cartoes-numeros { grid-template-columns: repeat(3, 1fr); } }
+.cartao-numero { padding: 14px; border-radius: var(--r-md); background: var(--surface); box-shadow: var(--sombra); display: grid; gap: 2px; }
+.cartao-numero strong { font-size: 20px; }
+.cartao-numero span { font-size: 12px; color: var(--ink-3); font-weight: 600; }
+.quebra { word-break: break-all; }
+.convite { display: grid; gap: 10px; margin-top: 14px; }
+.chave-gerada {
+  margin: 0; padding: 12px; border-radius: var(--r-sm); background: var(--brand-soft); color: var(--brand);
+  font-size: 24px; font-weight: 800; letter-spacing: .06em; text-align: center;
+}
+.pessoa, .feedback-item { padding: 14px 16px; border-radius: var(--r-md); background: var(--surface); box-shadow: var(--sombra); }
+.pessoa.inativa { opacity: .6; }
+.pessoa-topo { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.metricas { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--ink-2); }
+.feedback-item p { margin: 6px 0 0; font-size: 14px; color: var(--ink-2); }
+.alerta-txt { color: var(--erro) !important; }
+.relatorio { display: grid; gap: 14px; }
+.relatorio section { padding: 14px 16px; border-radius: var(--r-md); background: var(--surface); box-shadow: var(--sombra); }
+.relatorio h3 { font-size: 16px; display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.alerta-conteudo { border-left: 4px solid var(--erro); }
+.alerta-conteudo .ico { color: var(--erro); }
+.item-rel { padding: 10px 0; border-top: 1px solid var(--line); }
+.item-rel:first-of-type { border-top: none; }
+.item-rel p { margin: 4px 0 0; font-size: 14px; color: var(--ink-2); }
+.citacoes { margin: 6px 0 0; padding-left: 18px; font-size: 13px; color: var(--ink-3); font-style: italic; }
+.decisoes { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.decisoes .chip { min-height: 36px; font-size: 13px; }
+
+.trocar-modo { display: block; margin: 18px auto 0; }
+.interruptor { display: flex; gap: 12px; align-items: flex-start; cursor: pointer; }
+.interruptor input { width: 22px; height: 22px; margin-top: 2px; accent-color: var(--brand); flex: none; }

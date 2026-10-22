@@ -1,0 +1,12 @@
+name: Manter o app acordado
+# O plano grátis da Render dorme após 15 min sem acesso; uma visita a cada 10 min o mantém ligado
+# (o mês inteiro cabe nas 750 horas grátis).
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+jobs:
+  visita:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -fsS -o /dev/null --max-time 90 https://atualizamed.onrender.com/ || true

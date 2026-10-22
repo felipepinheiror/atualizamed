@@ -1,0 +1,6 @@
+anthropic==1.15.0
+edge-tts==7.3.1
+lameenc==1.8.1  # só para a voz Gemini opcional (VOZ_GEMINI=1)
+huggingface_hub==0.34.4  # na nuvem: guarda os dados no repositório privado (nuvem.py)
+cryptography==44.0.3  # na nuvem: cifra o backup dos dados (nuvem.py)
+pypdf==5.1.0  # lê o PDF da versão aberta e legal do artigo (nucleo.texto_aberto)
